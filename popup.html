@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nudge Extension</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="nudge-popup" class="popup-wrapper">
+    <div class="header">
+      <h1>Trending Offers</h1>
+    </div>
+    
+    <!-- Filters aligned in opposite corners -->
+    <div class="filter-section">
+      <!-- Location Filter on the left -->
+      <div class="location-filter">
+        <label for="location-options">Location:</label>
+        <select id="location-options" class="filter-dropdown">
+          <option value="all">All Kerala</option>
+          <option value="thiruvananthapuram">Thiruvananthapuram</option>
+          <option value="kochi">Kochi</option>
+          <option value="kozhikode">Kozhikode</option>
+          <option value="thrissur">Thrissur</option>
+          <option value="kollam">Kollam</option>
+        </select>
+      </div>
+
+      <!-- Offer Filter on the right -->
+      <div class="offer-filter">
+        <label for="filter-options">Filter:</label>
+        <select id="filter-options" class="filter-dropdown">
+          <option value="all">All</option>
+          <option value="ecommerce">E-commerce Deals</option>
+          <option value="nearby">Nearby Deals</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="offers-container">
+      <div id="foodie" class="offer-section">
+        <h2>Foodie</h2>
+        <ul class="offer-list"></ul>
+      </div>
+      <div id="products" class="offer-section">
+        <h2>Online Products</h2>
+        <ul class="offer-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
